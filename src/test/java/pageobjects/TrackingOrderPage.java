@@ -82,12 +82,12 @@ public class TrackingOrderPage extends BasePage {
         return notificationBox.getText().toLowerCase().contains(msg.toLowerCase());
     }
 
-    public boolean generateFinalBtnEnabled() {
-        return btnGenerateFinal.isEnabled();
+    public boolean generateFinalBtnDisabled() {
+        return btnGenerateFinal.isDisabled();
     }
 
-    public boolean printBtnEnabled() {
-        return btnFind.isEnabled();
+    public boolean printBtnDisabled() {
+        return btnFind.isDisabled();
     }
 
 }

@@ -55,18 +55,18 @@ public class GenerateFinalSteps{
     }
     @And("Generate Final button is disabled")
     public void generateFinalButtonIsDisabled() {
-        Assert.assertFalse(trackingOrderPage.generateFinalBtnEnabled());
+        Assert.assertTrue(trackingOrderPage.generateFinalBtnDisabled());
     }
     @And("Generate Final button is enabled")
     public void generateFinalButtonIsEnabled() {
-        Assert.assertTrue(trackingOrderPage.generateFinalBtnEnabled());
+        Assert.assertFalse(trackingOrderPage.generateFinalBtnDisabled());
     }
     @And("Print button is disabled")
     public void printButtonIsDisabled() {
-        Assert.assertFalse(trackingOrderPage.printBtnEnabled());
+        Assert.assertTrue(trackingOrderPage.printBtnDisabled());
     }
     @And("Print button is enabled")
     public void printButtonIsEnabled() {
-        Assert.assertTrue(trackingOrderPage.printBtnEnabled());
+        Assert.assertFalse(trackingOrderPage.printBtnDisabled());
     }
 }
