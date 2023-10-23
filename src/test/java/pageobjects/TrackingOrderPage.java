@@ -68,26 +68,23 @@ public class TrackingOrderPage extends BasePage {
     public void clickGenerateFinal() {
         btnGenerateFinal.click();
     }
-    public void notificationSuccess() {
-        waitFor(ExpectedConditions.visibilityOf(notificationBox));
-        notificationBox.containsText("Generate Final Sukses!");
-    }
-
     public void closeNotification() {
         btnOkNotification.click();
         waitFor(ExpectedConditions.invisibilityOf(btnOkNotification));
+    }
+    public void notificationSuccess() {
+        waitFor(ExpectedConditions.visibilityOf(notificationBox));
+        notificationBox.containsText("Generate Final Sukses!");
     }
     public boolean notificationFail(String msg) {
         waitFor(ExpectedConditions.visibilityOf(notificationBox));
         return notificationBox.getText().toLowerCase().contains(msg.toLowerCase());
     }
-
     public boolean generateFinalBtnDisabled() {
         return btnGenerateFinal.isDisabled();
     }
-
     public boolean printBtnDisabled() {
-        return btnFind.isDisabled();
+        return btnPrint.isDisabled();
     }
 
 }
